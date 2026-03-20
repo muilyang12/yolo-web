@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YOLO Web Object Detection</title>
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <main>
+        <h1>YOLO Web Object Detection</h1>
+        <p>Run object detection using default images or your camera</p>
+
+        <div id="controls">
+          <button id="camera-button" type="button">Camera</button>
+          <button
+            id="btn-image-1"
+            class="image-btn"
+            data-url="./default-image-01.jpg"
+            type="button"
+          >
+            Use Default Image 1
+          </button>
+          <button
+            id="btn-image-2"
+            class="image-btn"
+            data-url="./default-image-02.jpg"
+            type="button"
+          >
+            Use Default Image 2
+          </button>
+          <button
+            id="btn-image-3"
+            class="image-btn"
+            data-url="./default-image-03.jpg"
+            type="button"
+          >
+            Use Default Image 3
+          </button>
+        </div>
+
+        <p id="status-banner" data-tone="info">Press a button to start.</p>
+
+        <div id="placeholder">
+          Click an image button to load a sample image,<br />
+          or click the Camera button to stream your webcam.
+        </div>
+
+        <div class="media-stack" id="media-stack">
+          <img
+            id="preview-image"
+            class="preview-image"
+            alt="Default sample image"
+            crossorigin="anonymous"
+            hidden
+          />
+          <video
+            id="preview-video"
+            class="preview-video"
+            autoplay
+            playsinline
+            muted
+            hidden
+          ></video>
+          <canvas id="overlay" class="overlay-canvas"></canvas>
+        </div>
+
+        <h2>Detection Results</h2>
+        <p id="result-summary">No results yet.</p>
+        <ul id="detection-list"></ul>
+      </main>
+    </div>
+  </body>
+</html>
