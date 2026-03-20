@@ -1,0 +1,1 @@
+body{margin:16px}#controls{display:flex;gap:16px}.media-stack{position:relative;display:inline-block;margin-top:12px}.preview-image,.preview-video{max-width:100%;max-height:70vh}.overlay-canvas{position:absolute;left:0;top:0;pointer-events:none}#detection-list{padding-left:20px}#status-banner[data-tone=error]{color:#b00020}#status-banner[data-tone=success]{color:#0a7a2f}
